@@ -6,7 +6,7 @@ RUN yum install git -y
 RUN yum install httpd -y 
 RUN mkdir -p /var/www
 RUN touch /var/www/index.php
-COPY /var/www/index.php /var/www/html/
+COPY index.php /var/www/html/
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
