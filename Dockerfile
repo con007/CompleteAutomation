@@ -2,7 +2,7 @@ FROM centos:7
 
 RUN yum install -y openssh-server
 RUN mkdir /var/run/sshd
-RUN echo 'docker:dock123' | chpasswd
+RUN echo 'root:dock123' | chpasswd
 RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D", "FOREGROUND"]
