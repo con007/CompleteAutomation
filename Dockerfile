@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt install openjdk-8-jre -y
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server && apt-get install openjdk-8-jre -y
 RUN mkdir -p /var/run/sshd
 RUN echo 'root:dock123' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
