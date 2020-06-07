@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt install java-1.8.0-openjdk -y
+RUN apt install openjdk-8-jre -y
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
 RUN echo 'root:dock123' | chpasswd
