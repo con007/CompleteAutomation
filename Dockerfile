@@ -12,6 +12,6 @@ RUN chmod +x ./kubectl
 RUN cp ./kubectl /usr/local/bin/kubectl
 RUN mv ./kubectl /usr/bin/kubectl
 
-CMD ["/usr/sbin/sshd", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/sshd", "-D"]
 EXPOSE 22
 
